@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #dae8ee;
+}
+
+/* The grid: Four equal columns that float next to each other */
+.column {
+  float: left;
+  width: 100%; /* Adjusted width for responsiveness */
+  padding: 10px;
+  border: solid black 2px;
+  margin: 2px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+.row {
+  margin-left: 0; /* Adjusted margin for responsiveness */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+  padding-left: 10px; /* Adjusted padding for responsiveness */
+  margin-top: 50px;
+}
+
+.container img {
+  border: solid black 5px;
+  padding: 8px;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: rgb(255, 248, 248);
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: rgb(240, 240, 240);
+  background-color: red;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+/* Navigation Styles */
+
+.nav-area {
+  background-color: rgb(110, 110, 110);
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+/* Map Styles */
+
+div .map {
+  size: 10%;
+  padding: 0px;
+}
+
+/* Footer Styles */
+
+.background {
+  background: rgb(5, 5, 5);
+  background-blend-mode: darken;
+  background-size: cover;
+}
+
+.text-footer {
+  text-align: center;
+  padding: 20px 0; /* Added some padding for better spacing on smaller screens */
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  justify-content: center;
+  color: white;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 20px;
+  width: 38px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 10px; /* Reduced margin for better spacing on smaller screens */
+  border-radius: 40%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.follow h2 {
+  color: white;
+  font-size: 20px;
+  text-align: center; /* Center-align text on smaller screens */
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (min-width: 600px) {
+  .column {
+    width: 48%; /* Adjusted width for responsiveness on larger screens */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .column {
+    width: 48%; /* Adjusted width for responsiveness on larger screens */
+  }
+
+  .row {
+    margin-left: 50px; /* Adjusted margin for responsiveness on larger screens */
+  }
+
+  .container {
+    padding-left: 50px; /* Adjusted padding for responsiveness on larger screens */
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .column {
+    width: 23%; /* Adjusted width for responsiveness on larger screens */
+  }
+}
+
+/* Add more media queries as needed */
